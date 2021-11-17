@@ -1,0 +1,104 @@
+
+    *{
+       margin: 0;
+       padding: 0;
+       border: 0; 
+    }
+    body{
+        background-color: cadetblue;
+    }
+    h1{
+        color: rgb(58, 40, 161);
+        background-color: rgb(173, 21, 173);
+        font-family: sans-serif;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: underline brown;
+    }
+    
+    h3{
+        color: rgb(87, 87, 87);
+        background-color: #002;
+        font-family: sans-serif;
+        font-weight: 800;
+        text-align: center;
+        text-decoration: underline;
+        font-style: italic;
+    }
+    p{
+        color: rgb(65, 34, 178);
+        text-transform: none;
+        letter-spacing: 0.2em;
+        word-spacing: 0.5em;
+        line-height: 1;
+        text-align: center;
+    }
+    a{
+        font-size: x-large;
+        text-decoration: none;
+        color: purple;
+    }
+    #clickHere{
+        color: rgb(25, 0, 255);
+    }
+    
+    nav{
+        position: relative;
+    }
+    .relative1 {
+        position: relative;
+      }
+    .relative2 {
+        position: relative;
+        top: -20px;
+        left: 20px;
+        background-color: rgb(255, 255, 255);
+        width: 500px;
+      }
+    .fixed {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: rgb(255, 255, 255);
+      }
+    .carList{
+        text-decoration: unset;
+    }
+    form{
+        padding: 15px;
+        background-color: rgb(219, 27, 27);
+        font-style: italic;
+        border-style: solid;
+        font-weight: 900px;
+    }
+    input[type=button]{
+        color: thistle;
+        background-color: rgb(58, 40, 161);
+        padding: 5px;
+    }
+    input[type=button]:hover{
+        border: solid;
+        background-color: seagreen;
+    }
+    input[type=text]:focus{
+        background-color: rgb(207, 37, 207);
+        color: black;
+        width: 100%;
+        transition: 2s;
+    }
+    .div1{
+        background-color: aquamarine;
+    }
+    .div2{
+        background-color: brown;
+    }
+    .div3{
+        background-color: darkcyan;
+    }
+    .div4{
+        background-color: darkred;
+    }
+
+    .div1, .div2, .div3, .div4{
+        border: dashed;
+    }
