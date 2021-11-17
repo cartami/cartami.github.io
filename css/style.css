@@ -5,6 +5,8 @@ html, body {
     height: 100%;
     margin: 0px;
     padding: 0px;
+    
+    font-family: 'Open Sans', sans-serif;
   }
   
   .wrapper {
@@ -31,6 +33,11 @@ html, body {
     align-items: center;
     justify-content: center;
   }
+
+  .name {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 2px;
+  }
   
   .profile-picture {
     border-radius: 50%;
@@ -54,4 +61,6 @@ html, body {
   .social-links a:hover {
     background-color: rgba(0, 0, 0, 0.1);
   }
-  
+  .body {
+    background: linear-gradient(to bottom, rgba(231, 240, 245, 1) 0%, rgba(170, 221, 235, 1) 100%);
+  }
