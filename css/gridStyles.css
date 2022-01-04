@@ -1,0 +1,111 @@
+@media screen and (min-width: 700px) {
+    .container {
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-auto-rows: minmax(250px, 1fr);
+        grid-template-rows: 90px minmax(42vw, auto) repeat(3, minmax(450px, auto)) 180px;
+        grid-gap: 4px;
+        grid-template-areas:
+            "header header"
+            "cover1  cover1"
+            "main   side"
+            "image1 image2"
+            "contact contact"
+            "footer footer";
+    }
+
+    .header {
+        grid-area: header;
+        background-color: rgb(219, 69, 0);
+    }
+
+    .main-cover {
+        grid-area: cover1;
+        background-color: rgb(113, 137, 240);
+
+    }
+
+    .main {
+        grid-area: main;
+        background-color: rgb(55, 129, 172);
+    }
+
+    .sidebar {
+        grid-area: side;
+        background-color: rgb(128, 203, 247);
+    }
+
+    .image-showcase-1 {
+        grid-area: image1;
+        background-color: #f25777;
+    }
+
+    .image-showcase-2 {
+        grid-area: image2;
+        background: #40666f;
+
+    }
+
+    .contact-wrapper {
+        grid-area: contact;
+        background: #1d9db9;
+    }
+
+    .footer {
+        background-color: #313e51;
+        grid-area: footer;
+
+    }
+
+}
+
+@media screen and (min-width: 1110px) {
+
+    .hero-hi ul {
+        color: #1b1b1b;
+        list-style-type: none;
+        font-size: 4.5em;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 90px;
+        font-family: 'Lato', sans-serif;
+        color: #555555;
+
+    }
+
+    .hero-hi ul li {
+        padding: 5px 0;
+    }
+
+    .hero-hi ul li:first-child {
+        font-size: 0.7em;
+    }
+
+    .hero-hi ul li:last-child {
+        font-size: 0.4em;
+        font-style: italic;
+    }
+
+    h1,
+    h2 {
+        margin: 0 0 20px;
+    }
+
+    h1 {
+        font-size: 26pt;
+    }
+
+    .about-container p {
+        font-weight: 400;
+        line-height: 1.7em;
+        font-size: 14pt;
+        padding: 2%;
+    }
+
+    .about-container ul li {
+        padding-left: 18%;
+        align-self: center;
+    }
+
+}

@@ -1,49 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <!-- meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A page about vehicle recalls.">
+        <!-- Font links -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="vendor/css/all.css">
+        <link rel="stylesheet" href="css/basicStyles.css">
+        <link rel="stylesheet" href="css/flexStyles.css">
+        <link rel="stylesheet" href="css/gridStyles.css">
+        <link rel="stylesheet" href="css/smallMedia.css">
+        <!-- title -->
+        <title>Car Recall API</title>
 </head>
-<body>
-    <div class="bodyContainer">
+<!--Body grid starts -->
 
-        <div class="mainCharacterView left" >
-                <div class="nameBox">USS Schwarzenegger</div>
-                <div class="playerImage"></div>
-                <div class="playerStats">
+<body class="container">
+        <!-- header starts -->
+        <header class="header">
+                <!-- Nav starts -->
+                <nav>
+                        <!-- logo  -->
+                        <img class="logo" src="img/jdm-icon.png" alt="logo-jdm-car">
+                        <!-- navigation -->
+                        <ul>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#recalls">Recalls</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                        </ul>
+                </nav>
+                <!-- nav ends -->
 
-                Hull : 15 <br>
-                FirePower : 5 <br>
-                Accuracy : .7 <br>
+        </header>
+        <!-- header ends -->
+        <section class="main-cover">
+                <!-- hero image cover -->
+                <div class="hero-img">
+                </div>
+        </section>
+        <section class="main">
+                <!-- main image -->
+                <div class=”media1”>
+                        <img class="about-pic" src="img/about-large.jpg" alt="about-image" srcset="img/about-small.jpg 640w,
+                                img/about-medium.jpg 1280w,
+                                img/about-large.jpg 1920w" sizes="(max-width: 400px) 250px,
+                                (max-width: 1145px) 600px,
+                                700px">
+                </div>
+        </section>
 
-z
+        <section id="about" class="sidebar">
+                <div class="about-container">
+                        <!-- about page info -->
+                        <h1>About Page</h1>
+                        <p>A product recall usually involves the following steps, which may differ according to local
+                                laws:
 
+                                Maker or dealer notifies the authorities responsible of their intention to recall a
+                                product. In some cases the government can also request a recall of a product. Consumer
+                                hotlines or other communication channels are established. The scope of the recall, that
+                                is, which serial numbers or batch numbers etc. are recalled, is often specified.
+                                Product recall announcements are released on the respective government agency's website
+                                (if applicable), as well as in paid notices in the metropolitan daily newspapers. In
+                                some circumstances, heightened publicity will also result in news television reports
+                                advising of the recall.
+                                When a consumer group learns of a recall it will also notify the public by various
+                                means.
+                        </p>
+                        <!-- about page ends-->
+                </div>
+        </section>
+        <!-- recalls starts -->
+        <section id="recalls" class="image-showcase-1">
+                <!-- project-1 -->
+                <div class="main1">
+                        <div class=”media1”>
+                                <img class="about-pic" src="img/warranty.jpg" alt="warranty" srcset="img/warranty.jpg 640w,
+                                        img/warranty.jpg 1280w,
+                                        img/warranty.jpg 1920w" sizes="(max-width: 400px) 250px,
+                                        (max-width: 1145px) 600px,
+                                        700px">
+                        </div>
+                </div>
+                <div class="title">
+                        <h2><a href="#"> <i class="fas fa-link"> </i> Check for Vehicle Warranty</a></h2>
+                </div>
+        </section>
+        <section class="image-showcase-2">
+                <!-- project-2 -->
+                <div class="main1">
+                        <div class=”media1”>
+                                <img class="about-pic" src="img/infographic-large.png" alt="infographic-large image" srcset="img/infographic-large.png 640w,
+                        img/infographic-large.png 1280w,
+                        img/infographic-large.png 1920w" sizes="(max-width: 400px) 250px,
+                        (max-width: 1145px) 600px,
+                        700px">
+                        </div>
+                </div>
+                <div class="title">
+                        <h2><a href="car-search.html"> <i class="fas fa-link"> </i> Check for Vehicle recalls</a></h2>
+                </div>
+        </section>
+
+        <section id="contact-info" class="contact-wrapper">
+                <div class="contact-container">
+                        <div class="form">
+                                <h2>Contact Form</h2>
+                                <form class="contact-form" action="#" method="POST">
+                                        <input id="name" type="type" name="name" placeholder="Name" required="">
+                                        <input id="email" type="email" name="email" placeholder="Email" required="">
+                                        <textarea id="message" type="message" name="message" placeholder="Message"
+                                                required="" rows="6"></textarea>
+                                        <input class="button submit-button" type="submit" value="SEND">
+                                </form>
+                        </div>
                 </div>
 
-        </div>
+        </section>
 
-
-        <div class="mainCharacterView right">
-           
-            <div class="nameBox">Enemy</div>
-            <div class="enemyImage"></div>
-                <div class="enemyStats">
-                    Hull : 6 <br>
-                    FirePower : 3 <br>
-                    Accuracy : .6 <br>
-    
-    
+        <!-- recalls ends -->
+        <!-- footer -->
+        <footer id="contact" class="footer">
+                <div class="footer1">
+                        <ul>
+                                <li><a href="#"><i class="fab fa-slack-hash"></i></a></li>
+                                <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+                        </ul>
                 </div>
-            
-        </div>
-
-
-    <script src="app.js"></script>
+                <div class="center-footer">
+                        <a href="#"><strong>Car API</strong></a>
+                </div>
+        </footer>
+        <!-- footer end -->
+        <!-- body grid ends -->
 </body>
+
 </html>
