@@ -3,6 +3,8 @@ let recallInputs = document.querySelectorAll('button');
 let year = document.getElementById('year');
 let make = document.getElementById('make');
 let model = document.getElementById('model');
+//div element that will be used to render recall information
+const container = document.querySelector("div");
 
 //use div blocks to create all the recalls from each car make appear vertically
 const buttonTemplate = (desc, corrective_action, consequence, recall_number, make) => {
@@ -24,7 +26,7 @@ const innerParagraph = (consequence, recall_number) => {
 //render each oject item in the array 
 const render = (data, make) => {
     data.forEach(ele => {
-        document.querySelector('.container').innerHTML += buttonTemplate(ele.desc, ele.corrective_action, ele.consequence, ele.recall_number, make) //apend to the div
+        document.querySelector("div").innerHTML += buttonTemplate(ele.desc, ele.corrective_action, ele.consequence, ele.recall_number, make) //apend to the div
     });
 }
 
