@@ -8,7 +8,7 @@ const container = document.querySelector("div");
 
 //use div blocks to create all the recalls from each car make appear vertically
 const buttonTemplate = (desc, corrective_action, consequence, recall_number, make) => {
-    return `<div><br>${make.toUpperCase()} RECALL#${recall_number}<br><br>${desc}<br><br>${corrective_action}<br><br><button type="button" id='${recall_number}' onclick="innerParagraph('${consequence}','${recall_number}')">WHAT IS THE CONSEQUENCE?</button><p id='${recall_number}'></p></div>`
+    return `<div><br>${make.toUpperCase()} RECALL#${recall_number}<br><br>${desc}<br><br>${corrective_action}<br><br><button type="button" id='${recall_number}' onclick="innerParagraph('${consequence}','${recall_number}')">WHAT IS THE CONSEQUENCE?</button><p id='${recall_number}' style='color:red;'></p></div>`
 }
 
 //create new paragraph showing consequence info. from the data object in the JSON payload
@@ -34,11 +34,17 @@ const render = (data, make) => {
 const clearContainer = () => {
     document.querySelector("div").innerHTML = "";
 }
+//store JSON response
+let response = {};
 
 //iterate through the nodelist from querySelectorAll buttons and assign an EventListener to each button
 Array.from(recallInputs).forEach(recallInput => {
     recallInput.addEventListener('click', () => {
-
+        if (year.value===response.storeYear&&make.value===response.storeMake&&model.value===response.storeModel) {
+            clearContainer();
+            console.log(response.storeData);
+            render(response.storeData, response.storeMake);
+        }
         //URL string used to make GET call using filter parameters
         const url = `https://api.carmd.com/v3.0/recall?year=${year.value}&make=${make.value}&model=${model.value}`;
 
@@ -60,12 +66,14 @@ Array.from(recallInputs).forEach(recallInput => {
                 //let jsonData = JSON.stringify(data); //parse body into string
                 clearContainer(); //clear the past view whenver a refresh or GET call is made
                 //console.log(data);
-                console.log(data.data);
-                render(data.data, make.value);
+                response = { storeData: data.data, storeMake: make.value, storeModel: model.value, storeYear: year.value }
+                console.log(response.storeData);
+                render(response.storeData, response.storeMake);
 
             })
             .catch((error) => {
                 console.log(error)
             })
+
     });
 });
