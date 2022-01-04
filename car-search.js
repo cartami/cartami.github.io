@@ -8,7 +8,7 @@ const container = document.querySelector("div");
 
 //use div blocks to create all the recalls from each car make appear vertically
 const buttonTemplate = (desc, corrective_action, consequence, recall_number, make) => {
-    return `<div><br>${make.toUpperCase()} RECALL#${recall_number}<br><br>${desc}<br><br>${corrective_action}<br><br><button type="button" id='${recall_number}' onclick="innerParagraph('${consequence}','${recall_number}')">WHAT IS THE CONSEQUENCE?</button><p id='${recall_number}' style='color:red;'></p></div>`
+    return `<div><br>${make.toUpperCase()} RECALL#${recall_number}<br><br>${desc}<br><br>${corrective_action}<br><br><button type="button" id='${recall_number}' onclick="innerParagraph('${consequence}','${recall_number}')">WHAT IS THE CONSEQUENCE?</button><p id='${recall_number}' style='color:red'></p></div>`
 }
 
 //create new paragraph showing consequence info. from the data object in the JSON payload
