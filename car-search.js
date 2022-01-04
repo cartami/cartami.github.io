@@ -40,7 +40,7 @@ Array.from(recallInputs).forEach(recallInput => {
     recallInput.addEventListener('click', () => {
 
         //URL string used to make GET call using filter parameters
-        const url = `http://api.carmd.com/v3.0/recall?year=${year.value}&make=${make.value}&model=${model.value}`;
+        const url = `https://api.carmd.com/v3.0/recall?year=${year.value}&make=${make.value}&model=${model.value}`;
 
         //JS has a built in method for API calls
         // which is promise based
